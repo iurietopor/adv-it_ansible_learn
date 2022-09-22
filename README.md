@@ -1,5 +1,11 @@
 ## README.md
 
+### About the course
+
+Overview of the course can be found [here](https://www.udemy.com/course/russian-ansible/).
+
+## About this repo
+
 ### Complete project `$ tree`
 
 ```
