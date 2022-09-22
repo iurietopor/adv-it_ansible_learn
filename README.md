@@ -2,7 +2,7 @@
 
 ### Complete project `$ tree`
 
-'''
+```
 $ tree
 .
 ├── ansible.cfg
@@ -24,11 +24,11 @@ $ tree
 └── run_tf.sh
 
 4 directories, 13 files
-'''
+```
 
 #### Not pushed files list:
-	* `execute.sh` simple bash script which allow easy export AWS-IAM-credentials to WSL session
-	* `keys` folder and its content (private/public keys)
+- `execute.sh` simple bash script which allow easy export AWS-IAM-credentials to WSL session
+- `keys` folder and its content (private/public keys)
 
 
 
