@@ -32,12 +32,18 @@ $ tree
 │   ├── terraform.tfstate
 │   └── terraform.tfstate.backup
 ├── lessons
+│   ├── 10-lesson
+│   │   ├── MyWebSite
+│   │   │   └── index.html
+│   │   ├── playbook1.yml
+│   │   ├── playbook2.yml
+│   │   └── playbook3.yml
 │   └── 7-lesson
 │       └── simple_file_for_copy.txt
 ├── README.md
 └── run_tf.sh
 
-7 directories, 18 files
+9 directories, 22 files
 ```
 
 #### Not pushed files list:
