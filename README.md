@@ -13,6 +13,10 @@ $ tree
 .
 ├── ansible.cfg
 ├── execute.sh
+├── group_vars
+│   ├── all_servers
+│   ├── prod_servers
+│   └── staging_servers
 ├── hosts.txt
 ├── infrastracture
 │   ├── env
@@ -27,9 +31,13 @@ $ tree
 │   │   └── hosts.tpl
 │   ├── terraform.tfstate
 │   └── terraform.tfstate.backup
+├── lessons
+│   └── 7-lesson
+│       └── simple_file_for_copy.txt
+├── README.md
 └── run_tf.sh
 
-4 directories, 13 files
+7 directories, 18 files
 ```
 
 #### Not pushed files list:
