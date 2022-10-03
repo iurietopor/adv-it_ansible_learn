@@ -2,20 +2,9 @@
 ${host_x} 
 
 [prod_servers]
-${host_1} 
+${host_1} ansible_user=${user_1}  
 ${host_2}
 
 [all_servers:children]
 staging_servers
-prod_servers
-
-[all_servers:vars]
-ansible_user=${user} 
-
-[staging_servers:vars]
-ansible_ssh_private_key_file=${key_x}
-
-[prod_servers:vars]
-ansible_ssh_private_key_file=${key_1}
-
-
+prod_servers 

@@ -60,7 +60,7 @@ resource "aws_key_pair" "key_X" {
 resource "aws_instance" "ansible_client_1" {
   key_name = aws_key_pair.key_1.key_name
 
-  ami                    = var.image_id
+  ami                    = "ami-05ff5eaef6149df49"
   instance_type          = "t2.micro"
   vpc_security_group_ids = [aws_security_group.main_security_group.id]
 
@@ -183,18 +183,56 @@ data "template_file" "hosts_txt" {
   template = file("${var.env_path}/hosts.tpl")
 
   vars = {
-    user   = "ubuntu"
+    user_1 = "ec2-user"
     host_x = join("", ["linux ansible_host=", aws_instance.ansible_client_X.public_ip])
     host_1 = join("", ["linu1 ansible_host=", aws_instance.ansible_client_1.public_ip])
     host_2 = join("", ["linu2 ansible_host=", aws_instance.ansible_client_2.public_ip])
-    key_1  = "${var.key_path}/${var.key_list[0]}"
-    key_x  = "${var.key_path}/${var.key_list[1]}"
   }
 }
+
+data "template_file" "all_servers" {
+  template = file("${var.env_path}/all_servers.tpl")
+
+  vars = {
+    user = "ubuntu"
+  }
+}
+
+data "template_file" "prod_servers" {
+  template = file("${var.env_path}/prod_servers.tpl")
+
+  vars = {
+    key_1 = "${var.key_path}/${var.key_list[0]}"
+  }
+}
+
+data "template_file" "staging_servers" {
+  template = file("${var.env_path}/staging_servers.tpl")
+
+  vars = {
+    key_x = "${var.key_path}/${var.key_list[1]}"
+  }
+}
+
 
 resource "local_file" "save_inventory" {
   content = data.template_file.hosts_txt.rendered
   #filename = "home/sweetuser/adv-it/ansible_learn/hosts.txt"
   filename = "../hosts.txt"
+}
+
+resource "local_file" "save_all_serv" {
+  content  = data.template_file.all_servers.rendered
+  filename = "../group_vars/all_servers"
+}
+
+resource "local_file" "save_prod_serv" {
+  content  = data.template_file.prod_servers.rendered
+  filename = "../group_vars/prod_servers"
+}
+
+resource "local_file" "save_staging_serv" {
+  content  = data.template_file.staging_servers.rendered
+  filename = "../group_vars/staging_servers"
 }
 

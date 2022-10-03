@@ -1,21 +1,10 @@
 [staging_servers]
-linux ansible_host=3.123.30.242 
+linux ansible_host=3.70.14.212 
 
 [prod_servers]
-linu1 ansible_host=18.184.24.42 
-linu2 ansible_host=3.71.33.74
+linu1 ansible_host=3.75.234.165 ansible_user=ec2-user  
+linu2 ansible_host=35.158.137.6
 
 [all_servers:children]
 staging_servers
-prod_servers
-
-[all_servers:vars]
-ansible_user=ubuntu 
-
-[staging_servers:vars]
-ansible_ssh_private_key_file=~/adv_it/ansible_learn/infrastracture/keys/ubuntu-X
-
-[prod_servers:vars]
-ansible_ssh_private_key_file=~/adv_it/ansible_learn/infrastracture/keys/ubuntu-1
-
-
+prod_servers 
