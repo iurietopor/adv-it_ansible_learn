@@ -28,7 +28,10 @@ $ tree
 │   │   └── ubuntu-X.pub
 │   ├── main.tf
 │   ├── template
-│   │   └── hosts.tpl
+│   │   ├── all_servers.tpl
+│   │   ├── hosts.tpl
+│   │   ├── prod_servers.tpl
+│   │   └── staging_servers.tpl
 │   ├── terraform.tfstate
 │   └── terraform.tfstate.backup
 ├── lessons
@@ -38,12 +41,18 @@ $ tree
 │   │   ├── playbook1.yml
 │   │   ├── playbook2.yml
 │   │   └── playbook3.yml
+│   ├── 11-lesson
+│   │   └── playbook.yml
+│   ├── 12-lesson
+│   │   ├── MyWebSite
+│   │   │   └── index.html
+│   │   └── playbook.yml
 │   └── 7-lesson
 │       └── simple_file_for_copy.txt
 ├── README.md
 └── run_tf.sh
 
-9 directories, 22 files
+12 directories, 28 files
 ```
 
 #### Not pushed files list:
