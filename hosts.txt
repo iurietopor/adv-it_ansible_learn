@@ -1,9 +1,9 @@
 [staging_servers]
-linux ansible_host=3.70.14.212 
+linux ansible_host=18.197.227.13 
 
 [prod_servers]
-linu1 ansible_host=3.75.234.165 ansible_user=ec2-user  
-linu2 ansible_host=35.158.137.6
+linu1 ansible_host=18.192.5.123 ansible_user=ec2-user  
+linu2 ansible_host=3.121.225.254
 
 [all_servers:children]
 staging_servers
