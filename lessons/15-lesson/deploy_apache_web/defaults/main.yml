@@ -1,5 +1,4 @@
 ---
 # defaults file for deploy_apache_web
 
-# source_folder:  ./MyWebSite_2
 destin_folder: /var/www/html
