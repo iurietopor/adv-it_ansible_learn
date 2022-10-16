@@ -47,12 +47,46 @@ $ tree
 │   │   ├── MyWebSite
 │   │   │   └── index.html
 │   │   └── playbook.yml
+│   ├── 13-lesson
+│   │   ├── MyWebSite_2
+│   │   │   ├── crazy.jpg
+│   │   │   ├── Glacier.jpg
+│   │   │   ├── index.html
+│   │   │   ├── lake.jpg
+│   │   │   └── Sunrise.jpg
+│   │   ├── playbook_loop.yml
+│   │   └── playbook.yml
+│   ├── 14-lesson
+│   │   ├── MyWebSite_2
+│   │   │   ├── crazy.jpg
+│   │   │   ├── Glacier.jpg
+│   │   │   ├── index.j2
+│   │   │   ├── lake.jpg
+│   │   │   └── Sunrise.jpg
+│   │   └── playbook.yml
+│   ├── 15-lesson
+│   │   ├── deploy_apache_web
+│   │   │   ├── defaults
+│   │   │   │   └── main.yml
+│   │   │   ├── files
+│   │   │   │   ├── crazy.jpg
+│   │   │   │   ├── Glacier.jpg
+│   │   │   │   ├── lake.jpg
+│   │   │   │   └── Sunrise.jpg
+│   │   │   ├── handlers
+│   │   │   │   └── main.yml
+│   │   │   ├── README.md
+│   │   │   ├── tasks
+│   │   │   │   └── main.yml
+│   │   │   └── templates
+│   │   │       └── index.j2
+│   │   └── playbook.yml
 │   └── 7-lesson
 │       └── simple_file_for_copy.txt
 ├── README.md
 └── run_tf.sh
 
-12 directories, 28 files
+23 directories, 51 files
 ```
 
 #### Not pushed files list:
