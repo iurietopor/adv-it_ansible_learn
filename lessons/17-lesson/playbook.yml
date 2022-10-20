@@ -11,8 +11,5 @@
     ping:
 
    
-  - name: Create folders
-    include: create_folders.yml
-
-  - name: Create files
-    include: create_files.yml
+  - include: create_folders.yml
+  - include: create_files.yml

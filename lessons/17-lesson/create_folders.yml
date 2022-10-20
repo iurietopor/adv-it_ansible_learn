@@ -10,3 +10,9 @@
     path: /home/secret/folderB
     state: directory
     mode: 0755
+
+- name: Create folder C
+  file:
+    path: /home/secret/folderC
+    state: directory
+    mode: 0755
