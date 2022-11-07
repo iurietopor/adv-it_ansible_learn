@@ -1,0 +1,29 @@
+---
+- name: My ansible playbook
+  hosts: all 
+  become: yes
+
+  vars: 
+    mytext: "Hello, my friends!"
+
+  tasks:
+    - name: Ping test
+      ping:
+
+
+    - name: Create file1
+      copy:
+        dest: /home/file1.txt
+        content: |
+          This is FileN1
+          Some texet write here
+          An other text {{ mytext }} write here.
+      delegate_to: linux
+
+    - name: Create File2
+      copy: 
+        dest: /home/file2.txt
+        content: | 
+          This is FileN2
+          Some text write here
+          And some text {{ mytext }} write here.
