@@ -3,6 +3,7 @@
 ### About the course
 
 Overview of the course can be found [here](https://www.udemy.com/course/russian-ansible/).
+Also, all video from this course,can be founded on [youtube-channel of the author](https://www.youtube.com/watch?v=Ck1SGolr6GI&list=PLg5SS_4L6LYufspdPupdynbMQTBnZd31N)
 
 ## About this repo
 
